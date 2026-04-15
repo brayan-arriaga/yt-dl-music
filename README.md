@@ -31,7 +31,7 @@ Antes de usar la herramienta necesitas instalar:
 Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu_usuario/yt-dl-music.git
+git clone https://github.com/brayan-arriaga/yt-dl-music
 ```
 
 Entra al directorio del proyecto:
