@@ -111,22 +111,5 @@ Actualmente probado en:
 
 * Linux
 
----
-
-# Licencia
-
-Este proyecto está distribuido bajo la licencia incluida en el repositorio.
-
----
-
-Si quieres, también puedo ayudarte a hacer una **versión más profesional del README** con:
-
-* badges de GitHub
-* estructura más profesional
-* sección de roadmap
-* GIF mostrando cómo funciona
-* instalación como comando (`yt-dl-music`)
-
-que hace que el repositorio **se vea mucho más profesional**.
 
 
