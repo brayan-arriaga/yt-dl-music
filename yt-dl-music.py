@@ -34,18 +34,36 @@ def progreso(d):
 
 #opciones de descarga de musica
 opciones = {
-    'format': 'bestaudio/best',
-    'noplaylist': True,
-    'extractaudio': True,
+    'format': 'bestaudio[ext=m4a]/bestaudio/best',
     'quiet': True,
     'no_warnings': True,
+    'noplaylist': True,
+    'outtmpl': f'{name}.%(ext)s',
     'progress_hooks': [progreso],
+
+    # 🔥 CLAVE PARA 403
+    'extractor_args': {
+        'youtube': {
+            'player_client': ['android']
+        }
+    },
+
+    # 🔥 HEADERS tipo navegador
+    'http_headers': {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/122 Safari/537.36',
+        'Referer': 'https://www.youtube.com/'
+    },
+
+    # estabilidad
+    'retries': 20,
+    'fragment_retries': 20,
+    'concurrent_fragment_downloads': 1,
+
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': formato,
-        'preferredquality': '320'
+        'preferredquality': '0',
     }],
-    'outtmpl': f'{name}.%(ext)s'
 }
 
 
